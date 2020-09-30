@@ -5,5 +5,5 @@ application = ProtocolTypeRouter({
     # (http->django views is added by default)
     'websocket': URLRouter(
         backend.routing.websocket_urlpatterns
-        ),
+    ),
 })

@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import '../css/chatting.css';
 
 
-export default function Chatting() {
-    const [textValue, changeTextValue] = React.useState('메시지를 입력하세요');
+class Chatting extends Component {
+
+    constructor(props) {
+      super(props);
+      this.state = { textValue: '메시지를 입력하세요' };
+    }
+
+    componentDidMount() {
+      const socket = new WebSocket('ws://localhost:8000/ws/chat/123');
+    }
     // {
     //     allChats["chat"].map((chat, i) => (
     //         <div class="chat-section">
@@ -12,30 +20,34 @@ export default function Chatting() {
     //         </div>
     //     ))
     // }
-    return (
-        <div class="chatting">
-            <div class="chat-box">
-                <div class= "box-title">
-                    TinkerBell
-                </div>
-                <div class="msg-section">
+    render () {
+      return (
+          <div class="chatting">
+              <div class="chat-box">
+                  <div class= "box-title">
+                      TinkerBell
+                  </div>
+                  <div class="msg-section">
 
-                </div>
-                <form>
-                    <input class="user-input" type="text" value={textValue}  onChange={(e) => changeTextValue(e.target.value)}/>
-                    <button class="submit-button"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
- viewBox="0 0 448.011 448.011">
-<g>
-<g>
-    <path d="M438.731,209.463l-416-192c-6.624-3.008-14.528-1.216-19.136,4.48c-4.64,5.696-4.8,13.792-0.384,19.648l136.8,182.4
-        l-136.8,182.4c-4.416,5.856-4.256,13.984,0.352,19.648c3.104,3.872,7.744,5.952,12.448,5.952c2.272,0,4.544-0.48,6.688-1.472
-        l416-192c5.696-2.624,9.312-8.288,9.312-14.528S444.395,212.087,438.731,209.463z"/>
-</g>
-</g>
-</svg>
-</button>
-                </form>
-            </div>
-        </div>
-    )
+                  </div>
+                  <form>
+                      <input class="user-input" type="text" value={this.state.textValue}  onChange={(e) => this.setState({textValue: e.target.value})}/>
+                      <button class="submit-button"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+   viewBox="0 0 448.011 448.011">
+  <g>
+  <g>
+      <path d="M438.731,209.463l-416-192c-6.624-3.008-14.528-1.216-19.136,4.48c-4.64,5.696-4.8,13.792-0.384,19.648l136.8,182.4
+          l-136.8,182.4c-4.416,5.856-4.256,13.984,0.352,19.648c3.104,3.872,7.744,5.952,12.448,5.952c2.272,0,4.544-0.48,6.688-1.472
+          l416-192c5.696-2.624,9.312-8.288,9.312-14.528S444.395,212.087,438.731,209.463z"/>
+  </g>
+  </g>
+  </svg>
+  </button>
+                  </form>
+              </div>
+          </div>
+      )
+    }
 }
+
+export default Chatting;
