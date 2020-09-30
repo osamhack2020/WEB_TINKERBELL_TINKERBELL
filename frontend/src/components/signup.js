@@ -4,7 +4,7 @@ import '../css/signup.css';
 class Signup extends Component {
   constructor(props) {
     super(props);
-    this.state = { username: '', password1: '', password2: '' };
+    this.state = { username: '', password1: '', password2: '', match: false};
   }
 
   sendSigninRequest() {
@@ -12,12 +12,11 @@ class Signup extends Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: this.state.username,
-      password1: this.state.password1,
-      password2: this.state.password2})
+      password: this.state.password1})
     };
-    fetch('http://localhost:8000/api/rest-auth/registration', requestOptions)
-        .then(response => response.json())
-        .then(data => console.log(data));
+    fetch('http://localhost:8000/signup/', requestOptions);
+        // .then(response => response.json())
+        // .then(data => console.log(data));
   }
 
 
@@ -25,9 +24,9 @@ class Signup extends Component {
         return (
           <div class="Sigup">
             <form>
-              <input type="text" placeholder="Enter Username" name="uname" required/>
-              <input type="password" placeholder="Enter Password" name="psw" required/>
-              <input type="password2" placeholder="Enter Password Again" name="psw" required/>
+              <input type="text" placeholder="Enter Username" onChange={(e) => this.setState({username: e.target.value})} required/>
+              <input type="password" placeholder="Enter Password" onChange={(e) => this.setState({password1: e.target.value})} required/>
+              <input type="password2" placeholder="Enter Password Again" onChange={(e) => this.setState({password2: e.target.value})} required/>
               <button type="submit" onClick={this.sendSigninRequest()}>회원가입</button>
             </form>
           </div>
