@@ -33,8 +33,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
-    'backend'
+    'backend',
+    'rest_auth',
+    'rest_framework.authtoken',
+    'allauth',
+    'rest_auth.registration',
+    'django.contrib.sites',
 ]
+
+# https://velog.io/@jcinsh/DRF-11-Django-REST-Auth
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
