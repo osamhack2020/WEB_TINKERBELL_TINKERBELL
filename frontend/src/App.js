@@ -13,10 +13,10 @@ function App() {
         <Layout fixedHeader>
             <Header title={<div class="logo-name">TinkerBell</div>}>
                 <Navigation>
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
-                    <a href="#">Link</a>
+                    <a href="#">소개</a>
+                    <a href="#">사용하기</a>
+                    <a href="#">Contact</a>
+                    <a href="/login">Login</a>
                 </Navigation>
             </Header>
             <Drawer title="Title">
