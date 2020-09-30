@@ -1,0 +1,139 @@
+.chatting {
+    padding-top: 40px; 
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.chatting > .chat-box {
+    width: 50%;
+    height: 75%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 25px;
+    background: #f2f2f2;
+    box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
+    padding-top: 20px; 
+}
+
+.chatting > .chat-box > .box-title {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 46px;
+    text-align: center;
+    font-family: "discord-font";
+    font-size: 22px;
+    color: #6d10b0;
+    border-bottom: 1px solid#ede9e8;
+}
+
+.chat-box > form {
+    padding: 10px; 
+    height: 7%;
+}
+
+.chatting > .chat-box > .msg-section {
+    width: 90%;
+    height: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+}
+
+.user-input {
+    border: 0;
+    border-radius: 6px;
+    background: #f2f2f2;
+    box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
+    height: 100%;
+    width: 80%;
+    margin-right: 15px;
+    float: left;
+    padding-left: 20px;
+    color: #c7c4c3;
+}
+
+.submit-button {
+    border: 0;
+    border-radius: 6px; 
+    background: #f2f2f2;
+    box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
+    height: 103.5%;
+    width: 15%;
+}
+
+.submit-button:hover {
+    background: linear-gradient(145deg, #dadada, #ffffff);
+    box-shadow:  20px 20px 19px #d5d5d5, 
+             -20px -20px 19px #ffffff;
+}
+
+.submit-button > svg {
+    width: 20px; 
+    fill: #6d10b0;
+}
+
+.chat-section {
+    /* display: inline-block;  */
+}
+
+
+
+.icon-You {
+    width: 30px;
+    fill: #cf03fc;
+    float: right; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.msg-You {
+    clear: both; 
+    background: #f2f2f2;
+    box-shadow:  20px 20px 60px #cecece, 
+                -20px -20px 60px #ffffff;
+    width: max-content; 
+    float:right; 
+    border-radius: 6px; 
+    padding: 10px; 
+    color: #4d4f4f
+}
+
+.icon-TinkerBell {
+    width: 30px;
+    fill: #6d10b0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.msg-TinkerBell {
+    background: #f2f2f2;
+    box-shadow:  20px 20px 60px #cecece, 
+                -20px -20px 60px #ffffff;
+    display: inline-block; 
+    border-radius: 6px; 
+    padding: 10px; 
+    color: #4d4f4f;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f2f2f2; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
