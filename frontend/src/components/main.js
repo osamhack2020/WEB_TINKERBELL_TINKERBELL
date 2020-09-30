@@ -8,9 +8,9 @@ import UserStore from './userstore';
 class Main extends Component {
   async componentDidMount() {
     if (UserStore.isLoggedIn) {
-      console.log("123");
+      // console.log("123");
     }else {
-      console.log("sdfsdfds");
+      // console.log("");
     }
   }
 
