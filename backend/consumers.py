@@ -1,5 +1,6 @@
 from channels.consumer import AsyncConsumer
 from channels.exceptions import StopConsumer
+import json
 # from channels.generic.websocket import WebsocketConsumer
 
 class ChatConsumer(AsyncConsumer):
@@ -53,6 +54,12 @@ class ChatConsumer(AsyncConsumer):
             await self.receive(bytes_data=message["bytes"])
 
     async def receive(self, text_data=None, bytes_data=None):
+        text_data_json = json.loads(text_data)
+        print(text_data_json["message"])
+        self.send({
+            "type": "websocket.send", "text": "hakunamatata"
+        })
+        print("diditwork??")
         """
         Called with a decoded WebSocket frame.
         """

@@ -33,6 +33,8 @@ class App extends React.Component {
     this.sendSignupRequest();
   }
 
+
+
   async sendSignupRequest() {
     if (this.state.password_up1 != this.state.password_up2) {
       this.setState({

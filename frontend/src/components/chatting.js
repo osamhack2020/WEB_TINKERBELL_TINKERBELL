@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import UserStore from './userstore'
 import '../css/chatting.css';
-
+//https://dev.to/finallynero/using-websockets-in-react-4fkp/
 
 class Chatting extends Component {
 
@@ -10,14 +11,12 @@ class Chatting extends Component {
     }
 
     socketConnect() {
-      if (this.state.socket == null) {
-        this.state.socket = new WebSocket('ws://localhost:8000/ws/chat/123');
-      }
       this.state.socket.onopen = e => {
         console.log("websocket connected!");
       }
-      this.state.socket.onmesssage = e => {
-
+      //called when message is receivec from the django backend server
+      this.state.socket.onmessage = e => {
+        console.log("got new message");
       }
       this.state.socket.onerror = e => {
         console.log(e.messasge);
@@ -28,6 +27,10 @@ class Chatting extends Component {
       }
     }
 
+    componentWillMount() {
+      this.state.socket = new WebSocket('ws://localhost:8000/ws/chat/');
+    }
+
     componentDidMount() {
       this.socketConnect();
     }
@@ -35,6 +38,18 @@ class Chatting extends Component {
     componentWillUnmount() {
       console.log("websocket disconnected");
       this.state.socket.disconnect();
+    }
+
+    sendMessage() {
+      console.log("sent");
+      const data = {
+        user: UserStore.username,
+        message: this.state.textValue
+      }
+      this.state.socket.send(JSON.stringify(data));
+      this.setState({
+        textValue: '메시지를 입력하세요'
+      });
     }
 
     // {
@@ -57,7 +72,7 @@ class Chatting extends Component {
                   </div>
                   <form>
                       <input class="user-input" type="text" value={this.state.textValue}  onChange={(e) => this.setState({textValue: e.target.value})}/>
-                      <button class="submit-button"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                      <button class="submit-button" type="button" onClick={(e) => this.sendMessage()}><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
    viewBox="0 0 448.011 448.011">
   <g>
   <g>
