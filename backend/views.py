@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
@@ -15,13 +15,12 @@ def register(request):
         password = data["password"]
         # check if username exists
         if User.objects.filter(username=username).exists():
-            return HttpResponse(status=406)
+            return JsonResponse({"data":"2"});
         else:
             User.objects.create_user(username=username, password=password)
-            print("ok")
-            return HttpResponse(status=200)
+            return JsonResponse({"data":"1"});
     else:
-        return HttpResponse(status=404)
+        return JsonResponse({"data":"3"});
 
 @csrf_exempt
 def login(request):
@@ -31,8 +30,8 @@ def login(request):
         password = data["password"]
         user = authenticate(username=username, password=password)
         if user is not None:
-            return HttpREsponse(status=200)
+            return JsonResponse({"data":"1"});
         else:
-            return HttpResponse(status=406)
+            return JsonResponse({"data":"2"});
     else:
-        return HttpResponse(status=404)
+        return JsonResponse({"data":"3"});

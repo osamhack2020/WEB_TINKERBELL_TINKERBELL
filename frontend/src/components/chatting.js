@@ -6,12 +6,37 @@ class Chatting extends Component {
 
     constructor(props) {
       super(props);
-      this.state = { textValue: '메시지를 입력하세요' };
+      this.state = { textValue: '메시지를 입력하세요', socket: null };
+    }
+
+    socketConnect() {
+      if (this.state.socket == null) {
+        this.state.socket = new WebSocket('ws://localhost:8000/ws/chat/123');
+      }
+      this.state.socket.onopen = e => {
+        console.log("websocket connected!");
+      }
+      this.state.socket.onmesssage = e => {
+
+      }
+      this.state.socket.onerror = e => {
+        console.log(e.messasge);
+      }
+      this.state.socket.onclose = e => {
+        console.log("websocket closed!");
+        this.socketConnect();
+      }
     }
 
     componentDidMount() {
-      const socket = new WebSocket('ws://localhost:8000/ws/chat/123');
+      this.socketConnect();
     }
+
+    componentWillUnmount() {
+      console.log("websocket disconnected");
+      this.state.socket.disconnect();
+    }
+
     // {
     //     allChats["chat"].map((chat, i) => (
     //         <div class="chat-section">

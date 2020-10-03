@@ -19,5 +19,6 @@ from backend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup/', views.register)
+    path('signup/', views.register),
+    path('signin/', views.login)
 ]
