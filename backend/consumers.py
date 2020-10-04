@@ -55,11 +55,7 @@ class ChatConsumer(AsyncConsumer):
 
     async def receive(self, text_data=None, bytes_data=None):
         text_data_json = json.loads(text_data)
-        print(text_data_json["message"])
-        self.send({
-            "type": "websocket.send", "text": "hakunamatata"
-        })
-        print("diditwork??")
+        await self.send("yassbabyyyyy")
         """
         Called with a decoded WebSocket frame.
         """

@@ -33,6 +33,14 @@ class App extends React.Component {
     this.sendSignupRequest();
   }
 
+  componentWillMount() {
+    var username = window.sessionStorage.getItem("username");
+    if (username != null) {
+      UserStore.username = username;
+      UserStore.isLoggedIn = true;
+    }
+  }
+
 
 
   async sendSignupRequest() {
@@ -56,6 +64,7 @@ class App extends React.Component {
         UserStore.loading = false;
         UserStore.isLoggedIn = true;
         UserStore.username = this.state.username_up;
+        window.sessionStorage.setItem("username", this.state.username_in);
         //close modal
         this.setState({
           opensignupdialog: false,
@@ -86,6 +95,7 @@ class App extends React.Component {
       UserStore.loading = false;
       UserStore.isLoggedIn = true;
       UserStore.username = this.state.username_in;
+      window.sessionStorage.setItem("username", this.state.username_in);
       //close modal
       this.setState({
         openDialog: false
