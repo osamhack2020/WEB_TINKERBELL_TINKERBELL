@@ -62,12 +62,11 @@
     box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
     height: 103.5%;
     width: 15%;
+    transition: .3s ease;
 }
 
 .submit-button:hover {
-    background: linear-gradient(145deg, #dadada, #ffffff);
-    box-shadow:  20px 20px 19px #d5d5d5,
-             -20px -20px 19px #ffffff;
+    transform: scale(1.02);
 }
 
 .submit-button > svg {
