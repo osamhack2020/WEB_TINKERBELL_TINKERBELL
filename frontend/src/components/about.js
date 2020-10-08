@@ -9,7 +9,7 @@ class About extends Component {
                 <div class="card-space card">
                   <svg width="73px" height="60px" viewBox="0 0 73 60" version="1.1">
                       <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Group-5" transform="translate(-49.000000, -69.000000)" stroke="white" stroke-width="1.5">
+                          <g id="Group-5" transform="translate(-49.000000, -69.000000)" stroke="#470166" stroke-width="1.5">
                               <g id="30">
                                   <g transform="translate(50.000000, 70.000000)">
                                       <rect id="Rectangle" x="0.449367089" y="0.453125" width="69.8496203" height="51.3209375"></rect>
@@ -29,7 +29,7 @@ class About extends Component {
                 <div class="card-space card">
                   <svg width="73px" height="60px" viewBox="0 0 73 60" version="1.1">
                       <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Group-5" transform="translate(-49.000000, -69.000000)" stroke="white" stroke-width="1.5">
+                          <g id="Group-5" transform="translate(-49.000000, -69.000000)" stroke="#470166" stroke-width="1.5">
                               <g id="30">
                                   <g transform="translate(50.000000, 70.000000)">
                                       <rect id="Rectangle" x="0.449367089" y="0.453125" width="69.8496203" height="51.3209375"></rect>
@@ -49,7 +49,7 @@ class About extends Component {
                 <div class="card">
                   <svg width="73px" height="60px" viewBox="0 0 73 60" version="1.1">
                       <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Group-5" transform="translate(-49.000000, -69.000000)" stroke="white" stroke-width="1.5">
+                          <g id="Group-5" transform="translate(-49.000000, -69.000000)" stroke="#470166" stroke-width="1.5">
                               <g id="30">
                                   <g transform="translate(50.000000, 70.000000)">
                                       <rect id="Rectangle" x="0.449367089" y="0.453125" width="69.8496203" height="51.3209375"></rect>
