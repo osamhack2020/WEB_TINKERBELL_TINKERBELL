@@ -4,12 +4,11 @@ class Socket {
   constructor() {
     extendObservable(this, {
       socket: null,
-      allChats: []
+      allChats: [],
     })
   }
-
+#https://stackoverflow.com/questions/59632125/synchronousonlyoperation-error-in-with-django-3-and-django-channels
   socketConnect(token) {
-    console.log(token);
     this.socket = new WebSocket('ws://localhost:8000/ws/chat/?token=' + token);
     this.socket.onopen = e => {
       console.log("websocket connected!");
@@ -27,7 +26,7 @@ class Socket {
     }
     this.socket.onclose = e => {
       console.log("websocket closed!");
-      this.socketConnect();
+      //this.socketConnect();
     }
 
 

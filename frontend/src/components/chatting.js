@@ -13,12 +13,8 @@ class Chatting extends Component {
 
     componentWillMount() {
       if (localStorage.getItem('access_token')) {
-        //Socket.socketConnect(localStorage.getItem('access_token'));
-        //console.log("123");
+        Socket.socketConnect(localStorage.getItem('access_token'));
       }
-      for (var key in localStorage) {
-          console.log(key + ':' + localStorage[key]);
-        }
     }
 
     componentWillUnmount() {

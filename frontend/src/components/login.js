@@ -10,6 +10,15 @@ class Login extends Component {
         this.state = {username_in: "", password_in: "", username_up: "", password_up1: "", password_up2: ""};
     }
 
+    conponentDidUpdate() {
+        if(localStorage.getItem('username')) {
+            UserStore.username = localStorage.getItem('username');
+            UserStore.isLoggedIn = true;
+            this.setState({ isLoggedIn: true });
+            this.setState({ username: UserStore.username });
+        }
+    }
+
 
     async logIn() {
         try {
@@ -20,6 +29,7 @@ class Login extends Component {
             axiosInstance.defaults.headers['Authorization'] = "JWT " + data.access;
             localStorage.setItem('access_token', data.data.access);
             localStorage.setItem('refresh_token', data.data.refresh);
+            localStorage.setItem('username', this.state.username_in);
             this.setState({ 'loginDialog': false });
             this.setState({ isLoggedIn: true });
             this.setState({ username: this.state.username_in });
@@ -64,7 +74,7 @@ class Login extends Component {
     render() {
         return (
           <div>
-            { UserStore.isLoggedIn ?
+            { this.state.isLoggedIn ?
               (<div>{this.state.username}님 환영합니다</div>) :
                 (<Button colored onClick={() => this.openLoginDialog()} raised ripple>로그인</Button>)}
             <Dialog open={this.state.loginDialog}>

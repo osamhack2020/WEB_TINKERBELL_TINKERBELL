@@ -3,9 +3,23 @@ from rest_framework_simplejwt.tokens import UntypedToken
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
 from jwt import decode as jwt_decode
 from django.conf import settings
-from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from urllib.parse import parse_qs
+from channels.db import database_sync_to_async
 
+@database_sync_to_async
+def close_connections():
+    close_old_connections()
+
+
+@database_sync_to_async
+def get_user(user_jwt):
+    try:
+        #  Then token is valid, decode it
+        decoded_data = jwt_decode(user_jwt, settings.SECRET_KEY, algorithms=["HS256"])
+        return User.objects.get(id=decoded_data["user_id"]);
+    except User.DoesNotExist:
+        return AnonymousUser()
 
 class TokenAuthMiddleware:
     """
@@ -19,7 +33,7 @@ class TokenAuthMiddleware:
     def __call__(self, scope):
 
         # Close old database connections to prevent usage of timed out connections
-        close_old_connections()
+        close_connections()
 
         # Get the token
         token = parse_qs(scope["query_string"].decode("utf8"))["token"][0]
@@ -33,11 +47,7 @@ class TokenAuthMiddleware:
             print(e)
             return None
         else:
-            #  Then token is valid, decode it
-            decoded_data = jwt_decode(token, settings.SECRET_KEY, algorithms=["HS256"])
-
-            # Get the user using ID
-            user = get_user_model().objects.get(id=decoded_data["user_id"])
-
+            # Get the user using token
+            user = get_user(token)
         # Return the inner application directly and let it run everything else
         return self.inner(dict(scope, user=user))
