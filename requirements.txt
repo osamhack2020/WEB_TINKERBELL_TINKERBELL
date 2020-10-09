@@ -13,6 +13,7 @@ defusedxml==0.6.0
 Django==3.1.1
 django-cors-headers==3.5.0
 djangorestframework==3.12.1
+djangorestframework-simplejwt==4.4.0
 hyperlink==20.0.1
 idna==2.10
 incremental==17.5.0
@@ -22,6 +23,7 @@ pyasn1-modules==0.2.8
 pycparser==2.20
 pycurl @ file:///C:/Users/CKIRUser/Desktop/pycurl-7.43.0.5-cp38-cp38-win_amd64.whl
 PyHamcrest==2.0.2
+PyJWT==1.7.1
 pyOpenSSL==19.1.0
 python3-openid==3.2.0
 pytz==2020.1

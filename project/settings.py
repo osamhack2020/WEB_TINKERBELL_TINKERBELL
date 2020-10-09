@@ -3,6 +3,7 @@
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -53,7 +54,7 @@ REST_FRAMEWORK = {
     ),  #
 }
 
-# REFRESH_TOKEN은 14일간 유효하고 ACCESS_TOKEN은 5일간 유효하게 된다 
+# REFRESH_TOKEN은 14일간 유효하고 ACCESS_TOKEN은 5일간 유효하게 된다
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=14),
