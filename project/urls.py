@@ -20,5 +20,6 @@ from backend import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', views.register),
-    path('signin/', views.login)
+    path('signin/', views.login),
+    path('api/', include('authentication.urls'))
 ]
