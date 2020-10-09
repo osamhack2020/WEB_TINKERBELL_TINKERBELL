@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axiosInstance from "./axiosApi";
 import UserStore from './userstore';
+import Socket from './socketclass';
 import {Button, Dialog, DialogTitle, DialogContent, DialogActions} from 'react-mdl';
 
 class Login extends Component {
@@ -17,13 +18,14 @@ class Login extends Component {
                 password: this.state.password_in
             });
             axiosInstance.defaults.headers['Authorization'] = "JWT " + data.access;
-            localStorage.setItem('access_token', data.access);
-            localStorage.setItem('refresh_token', data.refresh);
+            localStorage.setItem('access_token', data.data.access);
+            localStorage.setItem('refresh_token', data.data.refresh);
             this.setState({ 'loginDialog': false });
-            // this.setState({ isLoggedIn: true });
-            // this.setState({ username: this.state.username_in });
+            this.setState({ isLoggedIn: true });
+            this.setState({ username: this.state.username_in });
             UserStore.username = this.state.username;
             UserStore.isLoggedIn = true;
+            Socket.socketConnect(data.access);
             return data;
         } catch (error) {
             this.setState({ error: true });
@@ -32,7 +34,7 @@ class Login extends Component {
     }
 
     async signUp() {
-        if (this.state.password_up1 != this.state.password_up2) {
+        if (this.state.password_up1 !== this.state.password_up2) {
             this.setState({ error: true });
             return;
         }

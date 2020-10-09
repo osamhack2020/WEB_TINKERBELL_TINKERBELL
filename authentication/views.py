@@ -9,6 +9,8 @@ from .serializers import MyTokenObtainPairSerializer, CustomUserSerializer
 
 
 class ObtainTokenPairView(TokenObtainPairView):
+    permission_classes = (permissions.AllowAny,)
+    authentication_classes = ()
     serializer_class = MyTokenObtainPairSerializer
 
 
