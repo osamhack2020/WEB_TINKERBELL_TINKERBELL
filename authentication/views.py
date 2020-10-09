@@ -18,8 +18,9 @@ class ObtainTokenPairView(TokenObtainPairView):
 
 class CustomUserCreate(APIView):
     permission_classes = (permissions.AllowAny,)
+    authentication_classes = ()
 
-    # POST요청으로 성공시 user정보가 담긴 json을 리턴합니다 
+    # POST요청으로 성공시 user정보가 담긴 json을 리턴합니다
     def post(self, request, format='json'):
         serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():

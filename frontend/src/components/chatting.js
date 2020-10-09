@@ -32,7 +32,7 @@ class Chatting extends Component {
     }
 
     componentWillMount() {
-      this.state.socket = new WebSocket('ws://localhost:8000/ws/chat/');
+      this.state.socket = new WebSocket('ws://localhost:8000/ws/chat/?token=');
     }
 
     componentDidMount() {

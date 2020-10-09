@@ -9,6 +9,7 @@ class Login extends Component {
         this.state = {username_in: "", password_in: "", username_up: "", password_up1: "", password_up2: ""};
     }
 
+
     async logIn() {
         try {
             const data = await axiosInstance.post('/token/obtain/', {
@@ -19,6 +20,10 @@ class Login extends Component {
             localStorage.setItem('access_token', data.access);
             localStorage.setItem('refresh_token', data.refresh);
             this.setState({ 'loginDialog': false });
+            // this.setState({ isLoggedIn: true });
+            // this.setState({ username: this.state.username_in });
+            UserStore.username = this.state.username;
+            UserStore.isLoggedIn = true;
             return data;
         } catch (error) {
             this.setState({ error: true });
@@ -45,7 +50,7 @@ class Login extends Component {
 
 
     openSignupDialog() {
-      this.setState({  'signupDialog': true });
+      this.setState({ 'signupDialog': true });
     }
 
     openLoginDialog() {
@@ -58,7 +63,7 @@ class Login extends Component {
         return (
           <div>
             { UserStore.isLoggedIn ?
-              (<div>{UserStore.username}님 환영합니다</div>) :
+              (<div>{this.state.username}님 환영합니다</div>) :
                 (<Button colored onClick={() => this.openLoginDialog()} raised ripple>로그인</Button>)}
             <Dialog open={this.state.loginDialog}>
               <DialogTitle>로그인</DialogTitle>
