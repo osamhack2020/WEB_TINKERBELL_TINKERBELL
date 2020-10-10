@@ -1,22 +1,14 @@
 import React from 'react';
 import './App.css';
-import {Layout, Header, Navigation, Drawer, Content, Button, Dialog, DialogTitle, DialogContent, DialogActions} from 'react-mdl';
+import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import Landingpage from './components/landingpage';
 import About from './components/about';
 import Chatting from './components/chatting';
 import FooterSec from './components/footer';
 import Login from './components/login';
-import UserStore from './components/userstore';
+import user from './components/userstore';
 
 class App extends React.Component {
-  componentWillMount() {
-    // var username = window.sessionStorage.getItem("username");
-    // if (username != null) {
-    //   UserStore.username = username;
-    //   UserStore.isLoggedIn = true;
-    // }
-  }
-
 
   render() {
     return (
