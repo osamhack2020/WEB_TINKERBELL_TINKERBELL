@@ -28,7 +28,7 @@ const Login = observer(
                   username: this.state.username_in,
                   password: this.state.password_in
               });
-              axiosInstance.defaults.headers['Authorization'] = "JWT " + data.access;
+              axiosInstance.defaults.headers['Authorization'] = "JWT " + data.data.access;
               localStorage.setItem('access_token', data.data.access);
               localStorage.setItem('refresh_token', data.data.refresh);
               localStorage.setItem('username', this.state.username_in);
