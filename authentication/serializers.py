@@ -1,5 +1,4 @@
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from rest_framework import serializers
 from django.contrib.auth.models import User
 
 
@@ -11,8 +10,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
     @classmethod
     def get_token(cls, user):
-        token = super().get_token(user)
-        return token
+        token = super(MyTokenObtainPairSerializer, cls).get_token(user)
+
 
 
 
@@ -23,8 +22,8 @@ class CustomUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(min_length=8, write_only=True)
 
     class Meta:
-        model = User
-        fields = ('username', 'password')
+        model = CustomUser
+        fields = (username', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
