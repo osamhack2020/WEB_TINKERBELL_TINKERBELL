@@ -22,8 +22,8 @@ class About extends Component {
                           </g>
                       </g>
                   </svg>
-                  <h1>높은 정확도</h1>
-                  <p>정확도가 많이많이 많이 많이 많이 많이 많이 많이많이 많이 많이많이 많이 많이많이 많이 많이높습니다</p>
+                  <h1>편리함</h1>
+                  <p>언제든지 접속해서 팅커벨에게 물어보세요! 언제든지 답할 준비가 되어있습니다</p>
                   <div class="learn-more">Learn More </div>
                 </div>
                 <div class="card-space card">
@@ -42,8 +42,8 @@ class About extends Component {
                           </g>
                       </g>
                   </svg>
-                  <h1>높은 정확도</h1>
-                  <p>정확도가 많이많이 많이 많이 많이 많이 많이 많이많이 많이 많이많이 많이 많이많이 많이 많이높습니다</p>
+                  <h1>정확도</h1>
+                  <p>팅커벨은 최적화된 기계학습 알고리즘을 이용하여 정확하게 질문자의 의도를 파악합니다</p>
                   <div class="learn-more">Learn More </div>
                 </div>
                 <div class="card">
@@ -62,8 +62,8 @@ class About extends Component {
                           </g>
                       </g>
                   </svg>
-                  <h1>높은 정확도</h1>
-                  <p>정확도가 많이많이 많이 많이 많이 많이 많이 많이많이 많이 많이많이 많이 많이많이 많이 많이높습니다</p>
+                  <h1>친근함</h1>
+                  <p>지루한 근무시간에 잠깐의 말동무가 되어드립니다 팅커벨과 친구가 되어보세요!</p>
                   <div class="learn-more">Learn More </div>
                 </div>
               </div>
