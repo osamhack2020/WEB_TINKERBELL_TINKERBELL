@@ -98,9 +98,9 @@ const Login = observer(
                   </form>
                 </DialogContent>
                 <DialogActions>
-                  <Button type='button' onClick={() => this.logIn()}>로그인</Button>
-                  <Button type='button' onClick={() => this.openSignupDialog()}>계정이 없습니다</Button>
+                  <Button type='button' onClick={() => this.openSignupDialog()}>회원가입</Button>
                   <Button type='button' onClick={() => this.closeLoginDialog()}>닫기</Button>
+                  <Button type='button' onClick={() => this.logIn()}>로그인</Button>
                 </DialogActions>
               </Dialog>
               <Dialog open={this.state.signupDialog}>

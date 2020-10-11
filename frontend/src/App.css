@@ -22,6 +22,13 @@
   font-weight: bold !important;
 }
 
-.mdl-dialog {
-  border-radius: 11px !important;
+.mdl-dialog__content > form > input {
+  width: 220px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.mdl-button--raised.mdl-button--colored {
+    background: none !important;
+    border-radius: 0 !important;
 }

@@ -1,6 +1,6 @@
 .about {
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 
 .about > .cards {
@@ -14,7 +14,7 @@
 .about > .cards > .card {
   float: left;
   width: 21.3%;
-  height: 50%;
+  height: 55%;
   background: #9002cf;
   transition: .3s ease;
   padding: 5%;

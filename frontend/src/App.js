@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import Landingpage from './components/landingpage';
@@ -6,15 +6,16 @@ import About from './components/about';
 import Chatting from './components/chatting';
 import FooterSec from './components/footer';
 import Login from './components/login';
-import user from './components/userstore';
+
 
 class App extends React.Component {
 
+
   render() {
     return (
-      <div style={{height: '100%', position: 'relative'}}>
-          <Layout fixedHeader>
-              <Header title={<div class="logo-name">TinkerBell</div>}>
+      <div>
+          <Layout>
+              <Header scroll title={<div class="logo-name">TinkerBell</div>}>
                   <Navigation>
                       <a href="#">소개</a>
                       <a href="#">사용하기</a>
