@@ -1,12 +1,8 @@
 
 
-[https://github.com/osam2019](https://github.com/osam2019)
-**2019프로젝트, readme.md를 참고하여 개발자님의 새로운 프로젝트를 만들어주세요!**
+![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/logo.png?raw=true)
 
-# Smaple Logo
-![Logo](https://logosbynick.com/wp-content/uploads/2018/03/final-logo-example.png)
 
-팀명 텍스트 및 팀명 로고 이미지 **(택1)**
 
 ## 팀소개 및 프로잭트 설명 동영상
 [![Watch the video](https://img.youtube.com/vi/LjX3eVQdIyk/0.jpg)](https://www.youtube.com/watch?time_continue=117&v=LjX3eVQdIyk)
@@ -19,15 +15,15 @@
 * ECMAScript 6 지원 브라우저 사용
 * 권장: Google Chrome 버젼 77 이상
 
-## 기술 스택 (Technique Used) (예시)
+## 기술 스택 (Technique Used) 
 ### Server(back-end)
- -  nodejs, php, java 등 서버 언어 버전 
- - express, laravel, sptring boot 등 사용한 프레임워크 
- - DB 등 사용한 다른 프로그램 
+ -  Django
+ -  Channels
+ -  Keras
  
 ### front-end
- -  react.js, vue.js 등 사용한 front-end 프레임워크 
- -  UI framework
+ -  react.js
+ -  react-mdl
  - 기타 사용한 라이브러리
 
 ## 설치 안내 (Installation Process)
@@ -48,8 +44,8 @@ $ yarn start or npm run start
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
-- hong gil dong (hong999@gmail.com), Github Id: gildong999
-- kim su ji (suji999@gmail.com), Github Id: suji999
+- 문재현 (mjh4ram@gmail.com), Github Id: mjh4ram
+- 양영환 (15eksakf@gmail.com), Github Id: 15div
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
