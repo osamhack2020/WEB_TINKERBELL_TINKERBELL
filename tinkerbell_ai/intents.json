@@ -1,73 +1,62 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["안녕하세요", "안녕", "수고하십니다", "필승", "충성", "하이"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
-         "context_set": ""
+         "patterns": ["안녕하세요", "안녕", "수고하십니다", "필승", "충성", "하이", "Hi", "Hello"]
         },
+    
+        {"tag": "positive",
+         "patterns": []
+        },
+        
+        {"tag": "negative",
+         "patterns": []
+        },
+    
         {"tag": "intranet",
-         "patterns": ["해당 페이지에 접속할 수 없다고 나옵니다", "계속 로딩중 입니다", "국방망이 안됩니다", "인트라넷이 떨어졌어요", "인트라넷이 작동을 안해요", "국방망 접속이 안돼요", "홈페이지에 안들어가져요"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
-         "context_set": ""
+         "patterns": ["해당 페이지에 접속할 수 없다고 나옵니다", "계속 로딩중 입니다", "국방망이 안됩니다", "인트라넷이 떨어졌어요", "인트라넷이 작동을 안해요", "국방망 접속이 안돼요", "홈페이지에 안들어가져요"]
         },
 
         {"tag": "sanghwangdo",
-         "patterns": ["상황도가 안나와요", "ATCIS 상황도 도식이 안돼요", "ATCIS 상황도가 안떠요"],
-         "responses": ["I am 18 years old!", "18 years young!"],
-         "context_set": ""
+         "patterns": ["상황도가 안나와요", "ATCIS 상황도 도식이 안돼요", "ATCIS 상황도가 안떠요"]
         },
 
         {"tag": "KMA",
-         "patterns": ["KMA 오류가 떴어요", "KMA 오류가 발생했어요", "KMA 오류가 나왔어요"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
-         "context_set": ""
+         "patterns": ["KMA 오류가 떴어요", "KMA 오류가 발생했어요", "KMA 오류가 나왔어요"]
+        },
+    
+        {"tag": "ip",
+         "patterns": ["컴퓨터 아이피 어떻게 바꿔요", "아이피 어케 바꿔요", "아이피", "ip"]
         },
 
         {"tag": "juyebi",
-         "patterns": ["주예비 전환 어떻게 해요", "ATCIS 주예비"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["주예비 전환 어떻게 해요", "ATCIS 주예비", "ATCIS 아이피", "atcis ip"]
         },
 
         {"tag": "TACS",
-         "patterns": ["TACS가 안돼요", "TACS가 안깔려요", "TACS 설치가 안돼요", "TACS 재설치가 안돼요", "탁스가 안돼요", "탁스가 안깔려요", "탁스 설치가 안돼요", "탁스 재설치가 안돼요"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
-         "context_set": ""
+         "patterns": ["TACS가 안돼요", "TACS가 안깔려요", "TACS 설치가 안돼요", "TACS 재설치가 안돼요", "탁스가 안돼요", "탁스가 안깔려요", "탁스 설치가 안돼요", "탁스 재설치가 안돼요"]
         },
 
         {"tag": "s-drive",
-         "patterns": ["문서 암호화가 안돼요", "sdrive", "S Drive", "s-drive 마운트가 안돼요", "파일이 안보여요", "파일이 사라졌어요"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["문서 암호화가 안돼요", "sdrive", "S Drive", "s-drive", "S-Drive", "에스드라이브", "마운트가 안돼요", "파일이 안보여요", "파일이 사라졌어요"]
         },
 
         {"tag": "printer",
-         "patterns": ["프린터가 안돼요", "프린터가 고장났어요", "프린터가 안잡혀요", "프린터 오류가 떠요", "프린터 오류가 발생했어요", "프린터 오류가 생겼어요", "프린터 오류가 났어요"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["프린터가 안돼요", "프린터가 고장났어요", "프린터가 안잡혀요", "프린터 오류가 떠요", "프린터 오류가 발생했어요", "프린터 오류가 생겼어요", "프린터 오류가 났어요"]
         },
 
         {"tag": "toner",
-         "patterns": ["프린터 토너 다썼어요", "잉크가 다 떨어졌어요", "토너가 없어요", "잉크가 필요해요", "토너를 받아야해요", "잉크가 필요해요", "토너를 다 썼어요" ],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["프린터 토너 다썼어요", "프린터에 잉크가 다 떨어졌어요", "토너가 없어요", "프린터 잉크가 필요해요", "프린터 토너를 받아야해요", "잉크가 필요해요", "토너를 다 썼어요", "토너 좀요"]
         },
 
         {"tag": "password",
-         "patterns": ["계정이 안돼요", "아이디가 잠겼어요", "비밀번호를 까먹었어요", "로그인이 안돼요", "로그인 실패했어요", "비밀번호를 초기화 해주세요", "비밀번호 기억이 안나요", "비밀번호가 생각이 안나요"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["계정이 안돼요", "아이디가 잠겼어요", "비밀번호를 까먹었어요", "로그인이 안돼요", "로그인 실패했어요", "비밀번호를 초기화 해주세요", "비밀번호 기억이 안나요", "비밀번호가 생각이 안나요", "비번"]
         },
 
         {"tag": "network",
-         "patterns": ["랜선에 불이 안들어와요", "네트워크에 연결할 수 없다고 떠요", "네트워크에 연결할 수 없다고 나와요", "네트워크에 연결할 수 없음이라고 떠요", "voip가 안돼요", "voip가 먹통이에요", "voip가 고장났어요"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["랜선에 불이 안들어와요", "네트워크에 연결할 수 없다고 떠요", "네트워크에 연결할 수 없다고 나와요", "네트워크에 연결할 수 없음이라고 떠요", "voip가 안돼요", "voip가 먹통이에요", "voip가 고장났어요"]
         },
 
 	    {"tag": "ess_sw",
-         "patterns": ["필수 프로그램을 설치하라고 떠요", "필수 프로그램을 설치하라고 나와요", "필수 프로그램을 설치하래요", "필수 프로그램이 미설치래요", "필수 프로그램 미설치라고 나와요", "필수 프로그램 미설치라고 떠요"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-         "context_set": ""
+         "patterns": ["필수 프로그램을 설치하라고 떠요", "필수 프로그램을 설치하라고 나와요","필수 프로그램이 미설치래요", "필수 프로그램 미설치라고 나와요"]
         }
    ]
 }
