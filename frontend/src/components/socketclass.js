@@ -14,7 +14,7 @@ class Socket {
     this.socket.onopen = e => {
       console.log("websocket connected!");
     }
-    //called when message is receivec from the django backend server
+    //called when message is received from the django backend server
     this.socket.onmessage = e => {
       const newChats = [...this.allChats];
       newChats.push({ "from": "TinkerBell", "msg": e.data });

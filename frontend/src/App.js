@@ -9,13 +9,27 @@ import Login from './components/login';
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+    this.state = {sticky: false};
+    this.onScroll = this.onScroll.bind(this);
+  }
 
+  onScroll() {
+    console.log(window.pageYOffset);
+    if (window.scrollY >= 64) {
+      this.setState({ sticky: true});
+    }else {
+      this.setState({ sticky: false});
+    }
+  }
 
   render() {
     return (
-      <div>
+      <div scroll ref={this.myRef} onScroll={this.onScroll}>
           <Layout>
-              <Header scroll title={<div class="logo-name">TinkerBell</div>}>
+              <Header scroll class = {this.sticky? 'sticky' : ''} title={<div class="logo-name">TinkerBell</div>}>
                   <Navigation>
                       <a href="#">소개</a>
                       <a href="#">사용하기</a>

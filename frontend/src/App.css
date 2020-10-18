@@ -32,3 +32,8 @@
     background: none !important;
     border-radius: 0 !important;
 }
+
+.sticky {
+  position: fixed;
+  background: black;
+}
