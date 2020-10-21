@@ -31,7 +31,7 @@
     height: 80px;
     width: 267px;
     border: none;
-    margin-top: 80px;
+    margin-top: 50px;
     color: white;
     font-size: 20px;
     font-weight: bolder;
@@ -44,6 +44,9 @@
     transform: scale(1.02);
 }
 
+.x-loggedin {
+   color: #fa849c !important;
+}
 .lp > .container > .row > .left > .landing-page-title {
     font-family: "discord-font";
     font-size: 50px;

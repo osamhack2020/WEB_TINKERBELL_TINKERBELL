@@ -54,7 +54,7 @@ const Chatting = observer (
                       }
                     </div>
                     <form>
-                        <input class="user-input" type="text" value={this.state.textValue}  onChange={(e) => this.setState({textValue: e.target.value})}/>
+                        <input class={UserStore.isLoggedIn ? "user-input" : "user-input x-loggedin"} type="text" value={UserStore.isLoggedIn ? this.state.textValue: "로그인이 필요한 서비스입니다"}  onChange={(e) => this.setState({textValue: e.target.value})}/>
                         <button class="submit-button" type="button" onClick={(e) => this.sendMessage()}><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
      viewBox="0 0 448.011 448.011">
     <g>
