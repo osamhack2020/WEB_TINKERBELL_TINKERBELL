@@ -54,12 +54,23 @@ class ChatConsumer(AsyncConsumer):
             await self.receive(bytes_data=message["bytes"])
 
     async def receive(self, text_data=None, bytes_data=None):
-        text_data_json = json.loads(text_data)
-        await self.send("yassbabyyyyy")
+        data = json.loads(text_data)
+        msg = data["msg"]
+        context = data["context"]
+        step = data["step"]
         """
-        Called with a decoded WebSocket frame.
+        클라이언트로부터 받은 정보를 ../tinkerbell_ai/tb_model로 전달
+        tinkerbell = tb_model()
+        prediction = tinkerbell.predict(msg)
+        prediction, context, step를 msg_processor로 전달 그리고
+        리턴받은 메시지를 클라이언트에게 다시전달 
+        proc = MsgProcessor(prediction, context, step)
+        await self.send(proc.get_messasge())
         """
-        pass
+
+
+
+        # await self.send("yassbabyyyyy")
 
     async def send(self, text_data=None, bytes_data=None, close=False):
         """
