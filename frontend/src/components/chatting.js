@@ -27,12 +27,13 @@ const Chatting = observer (
         console.log("sent");
         const data = {
           user: UserStore.username,
-          message: this.state.textValue
+          msg: this.state.textValue,
+          context: Socket.context,
+          step: Socket.step
         }
         Socket.socket.send(JSON.stringify(data));
         const newChats = [...Socket.allChats];
-        newChats.push({"from": "You", "msg": this.state.textValue,
-          "context": Socket.context, "step": Socket.step});
+        newChats.push({"from": "You", "msg": this.state.textValue});
         Socket.allChats = newChats;
       }
 

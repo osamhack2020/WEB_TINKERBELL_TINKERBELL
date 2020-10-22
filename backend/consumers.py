@@ -1,6 +1,9 @@
 from channels.consumer import AsyncConsumer
 from channels.exceptions import StopConsumer
+from tensorflow import keras
+from .msg_processor import MsgProcessor
 import json
+import numpy
 # from channels.generic.websocket import WebsocketConsumer
 
 class ChatConsumer(AsyncConsumer):
@@ -58,18 +61,20 @@ class ChatConsumer(AsyncConsumer):
         msg = data["msg"]
         context = data["context"]
         step = data["step"]
-        """
-        클라이언트로부터 받은 정보를 ../tinkerbell_ai/tb_model로 전달
-        tinkerbell = tb_model()
-        prediction = tinkerbell.predict(msg)
-        prediction, context, step를 msg_processor로 전달 그리고
-        리턴받은 메시지를 클라이언트에게 다시전달 
-        proc = MsgProcessor(prediction, context, step)
-        await self.send(proc.get_messasge())
-        """
 
+        # keras model 로드
+        tinkerbell = keras.models.load_model('./tinkerbell_ai')
+        msg_processor = MsgProcessor(-1, context, step)
+        # msg 프로세
+        msg = msg_processor.prep_message(msg)
+        output = tinkerbell.predict(msg)
+        index = -1
+        if numpy.amax(output) >= 0.95:
+            index = numpy.argmax(output)
+        msg_processor.index = index
+        data = msg_processor.get_messasge()
 
-
+        await self.send(json.dumps(data))
         # await self.send("yassbabyyyyy")
 
     async def send(self, text_data=None, bytes_data=None, close=False):

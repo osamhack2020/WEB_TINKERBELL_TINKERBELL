@@ -27,12 +27,36 @@ index설명
 24: homepage
 """
 import random
+import pickle
+import numpy
+import pandas as pd
+from konlpy.tag import Okt
 
 class MsgProcessor:
     def __init__(self, i, c, s):
         self.index = i
         self.context = c
         self.step = s
+        self.stemmer = Okt()
+
+    def prep_message(self, msg):
+        input_bag = []
+        input_words = self.stemmer.pos(msg, norm=True, stem=True)
+        words = pickle.load(open("./tinkerbell_ai/words.pkl", "rb"))
+
+        processed_input = []
+
+        for word in input_words:
+            if not word[1] in ["Josa","Eomi","Punctuation"]:
+                processed_input.append(word[0])
+
+        for word in words:
+            if word in processed_input:
+                input_bag.append(1)
+            else:
+                input_bag.append(0)
+        inputvar = pd.DataFrame([numpy.array(input_bag)], dtype=float, index=['input'])
+        return inputvar
 
     def get_messasge(self):
         s = ""
@@ -52,19 +76,19 @@ class MsgProcessor:
             if self.step == 1:
                 if self.context == 13:
                     s = "프린터 및 스캐너 추가-> +클릭 -> 가장 하단에 원하는 프린터가 목록에 없습니다 클릭 -> TCP/IP주소로 추가 -> 프린터 ip를입력하여 추가합니다"
-                else if self.context == 3:
+                elif self.context == 3:
                     s = "제어판\네트워크 및 인터넷\네트워크 연결 -> 네트워크아이콘 우클릭 속성 -> 인터넷 프로토콜 버전4를 클릭하여 게이트웨이와 dns가 올바른지 확인후 인트라넷이 되는지 확인해주세요"
                 else:
                     s = "사단CERT로 문의주시기 바랍니다"
-            else if self.step == 2:
+            elif self.step == 2:
                 if self.context == 13:
                     s = "프린터 속성에서 포트가 TCP/IP포트로 선택되어있는지 확인해보세요"
-            else if self.step == 3:
+            elif self.step == 3:
                 if self.context == 13:
                     s = "프린터 마스터 상병 XXX를 찾아주세요"
-                else if self.context == 3:
+                elif self.context == 3:
                     s = "랜선도 뽑았다가 다시 끼워보고, 재부팅을 5회 반복해보고 인트라넷이 되는지 확인해주세요"
-            else if self.step == 4:
+            elif self.step == 4:
                 if self.context == 3:
                     s = "사단CERT에서 정보보호병 문재현을 찾아주세요"
         # intranet
@@ -134,4 +158,4 @@ class MsgProcessor:
         else:
             s = "홈페이지 관리는 사단CERT 정보보호병 문재현에게 문의하세요"
 
-        return { "context": self.index, "msg": s }
+        return { "context": str(self.index), "msg": s }
