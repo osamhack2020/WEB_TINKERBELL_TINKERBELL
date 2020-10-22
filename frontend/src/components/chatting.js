@@ -31,7 +31,8 @@ const Chatting = observer (
         }
         Socket.socket.send(JSON.stringify(data));
         const newChats = [...Socket.allChats];
-        newChats.push({"from": "You", "msg": this.state.textValue});
+        newChats.push({"from": "You", "msg": this.state.textValue,
+          "context": Socket.context, "step": Socket.step});
         Socket.allChats = newChats;
       }
 

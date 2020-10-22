@@ -5,6 +5,10 @@ class Socket {
     extendObservable(this, {
       socket: null,
       allChats: [],
+      // chatting의 context
+      context: -1,
+      // chatting의 step
+      step: 0
     })
   }
 
@@ -17,8 +21,16 @@ class Socket {
     //called when message is received from the django backend server
     this.socket.onmessage = e => {
       const newChats = [...this.allChats];
-      newChats.push({ "from": "TinkerBell", "msg": e.data });
+      const data = JSON.parse(e.data);
+      newChats.push({ "from": "TinkerBell", "msg": data.msg });
       this.allChats = newChats;
+      // check if the context of message is same as prev context
+      if (this.context == data.context) {
+        this.step = this.step + 1;
+      } else {
+        this.step = 0;
+        this.context = data.context;
+      }
     }
     this.socket.onerror = e => {
       console.log(e.messasge);
