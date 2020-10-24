@@ -1,142 +1,134 @@
 .chatting {
-    padding-top: 40px;
-    height: 100%;
-    width: 100%;
-    background-color: #f2f2f2;
+padding-top:40px;
+height:100%;
+width:100%;
+background-color:#f2f2f2;
 }
 
 .chatting > .chat-box {
-    width: 50%;
-    height: 75%;
-    margin-left: 25%;
-    margin-right: 25%;
-    border-radius: 25px;
-    background: #f2f2f2;
-    box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
-    padding-top: 20px;
+width:50%;
+height:75%;
+margin-left:25%;
+margin-right:25%;
+border-radius:25px;
+background:#f2f2f2;
+box-shadow:20px 20px 60px #cecece, -20px -20px 60px #fff;
+padding-top:20px;
 }
 
 .chatting > .chat-box > .box-title {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 46px;
-    text-align: center;
-    font-family: "discord-font";
-    font-size: 22px;
-    color: #6d10b0;
-    border-bottom: 1px solid#ede9e8;
+width:90%;
+margin-left:5%;
+margin-right:5%;
+height:46px;
+text-align:center;
+font-family:discord-font;
+font-size:22px;
+color:#6d10b0;
+border-bottom:1px solid#ede9e8;
 }
 
 .chat-box > form {
-    padding: 10px;
-    height: 7%;
+height:7%;
+padding:10px;
 }
 
 .chatting > .chat-box > .msg-section {
-    width: 90%;
-    height: 80%;
-    padding-left: 5%;
-    padding-right: 5%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+width:90%;
+height:80%;
+padding-left:5%;
+padding-right:5%;
+overflow-y:scroll;
+overflow-x:hidden;
 }
 
 .user-input {
-    border: 0;
-    border-radius: 6px;
-    background: #f2f2f2;
-    box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
-    height: 100%;
-    width: 80%;
-    margin-right: 15px;
-    float: left;
-    padding-left: 20px;
-    color: #c7c4c3;
+border:0;
+border-radius:6px;
+background:#f2f2f2;
+box-shadow:20px 20px 60px #cecece, -20px -20px 60px #fff;
+height:100%;
+width:80%;
+margin-right:15px;
+float:left;
+padding-left:20px;
+color:#c7c4c3;
 }
 
 .submit-button {
-    border: 0;
-    border-radius: 6px;
-    background: #f2f2f2;
-    box-shadow: 20px 20px 60px #cecece, -20px -20px 60px #ffffff;
-    height: 103.5%;
-    width: 15%;
-    transition: .3s ease;
+border:0;
+border-radius:6px;
+background:#f2f2f2;
+box-shadow:20px 20px 60px #cecece, -20px -20px 60px #fff;
+height:103.5%;
+width:15%;
+transition:.3s ease;
 }
 
 .submit-button:hover {
-    transform: scale(1.02);
+transform:scale(1.02);
 }
 
 .submit-button > svg {
-    width: 20px;
-    fill: #6d10b0;
+width:20px;
+fill:#6d10b0;
 }
 
 .chat-section {
-  height: 110px;
+height:110px;
 }
 
-
-
 .icon-You {
-    width: 30px;
-    fill: #cf03fc;
-    float: right;
-    margin-top: 10px;
-    margin-bottom: 10px;
+width:30px;
+fill:#cf03fc;
+float:right;
+margin-top:10px;
+margin-bottom:10px;
 }
 
 .msg-You {
-    clear: both;
-    background: #f2f2f2;
-    box-shadow:  20px 20px 60px #cecece,
-                -20px -20px 60px #ffffff;
-    width: max-content;
-    float:right;
-    border-radius: 6px;
-    padding: 10px;
-    color: #4d4f4f
+clear:both;
+background:#f2f2f2;
+box-shadow:20px 20px 60px #cecece, -20px -20px 60px #fff;
+width:max-content;
+float:right;
+border-radius:6px;
+color:#4d4f4f;
+padding:10px;
 }
 
 .icon-TinkerBell {
-    width: 30px;
-    fill: #6d10b0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+width:30px;
+fill:#6d10b0;
+margin-top:10px;
+margin-bottom:10px;
 }
 
 .msg-TinkerBell {
-    background: #f2f2f2;
-    box-shadow:  20px 20px 60px #cecece,
-                -20px -20px 60px #ffffff;
-    display: inline-block;
-    border-radius: 6px;
-    padding: 10px;
-    color: #4d4f4f;
+background:#f2f2f2;
+box-shadow:20px 20px 60px #cecece, -20px -20px 60px #fff;
+display:inline-block;
+border-radius:6px;
+color:#4d4f4f;
+padding:10px;
 }
 
 .username_login {
-  float:left;
+float:left;
 }
 
-/* width */
 ::-webkit-scrollbar {
-  width: 6px;
+width:6px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #f2f2f2;
+background:#f2f2f2;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #dbdbdb;
+background:#dbdbdb;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+background:#555;
 }

@@ -1,73 +1,73 @@
-.lp {
-    width: 100%;
-    height: 610px;
-    background-image: linear-gradient(180deg, #470166 0%, #9002cf 100%);
-}
-
-
-.lp > .container {
-    width: 80%;
-    padding-top: 65px;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 400px;
-}
-
-.lp > .container > .row {
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-}
-
-.lp > .container > .row > .left {
-    width: 30%;
-    height: 90%;
-    float: left;
-    padding-top: 14%;
-    padding-left: 10%;
-}
-
 .left > button {
-    height: 80px;
-    width: 267px;
-    border: none;
-    margin-top: 50px;
-    color: white;
-    font-size: 20px;
-    font-weight: bolder;
-    background: #9002cf;
-    transition: .3s ease;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+background:#9002cf;
+border:none;
+box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+color:#FFF;
+font-size:20px;
+font-weight:bolder;
+height:80px;
+margin-top:50px;
+transition:.3s ease;
+width:267px;
 }
 
 .left > button:hover {
-    transform: scale(1.02);
+transform:scale(1.02);
 }
 
-.x-loggedin {
-   color: #fa849c !important;
+.lp {
+background-image:linear-gradient(180deg,#4701660%,#9002cf100%);
+height:610px;
+width:100%;
 }
+
+.lp > .container {
+height:400px;
+margin-left:10%;
+margin-right:10%;
+padding-top:65px;
+width:80%;
+}
+
+.lp > .container > .row {
+flex-wrap:wrap;
+height:100%;
+width:100%;
+}
+
+.lp > .container > .row > .left {
+float:left;
+height:90%;
+padding-left:10%;
+padding-top:14%;
+width:30%;
+}
+
 .lp > .container > .row > .left > .landing-page-title {
-    font-family: "discord-font";
-    font-size: 50px;
-    color: white;
-    height: 30%;
+color:#FFF;
+font-family:discord-font;
+font-size:50px;
+height:30%;
 }
 
-.lp > .container > .row > .left > p{
-    font-size: 22px !important;
-    font-weight: 800 !important;
-    color: white;
-    padding-right: 20px;
-    line-height: 33px !important;
+.lp > .container > .row > .left > p {
+color:#FFF;
+font-size:22px!important;
+font-weight:800!important;
+line-height:33px!important;
+padding-right:20px;
 }
 
 .lp > .container > .row > .right {
-    width: 60%;
-    height: 100%;
-    float: left;
+float:left;
+height:100%;
+width:60%;
 }
 
 .lp > .container > .row > .right > .main-img {
-    width: 700px;
+width:700px;
+}
+
+.x-loggedin {
+color:#fa849c!important;
 }
