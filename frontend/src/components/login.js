@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axiosInstance from "./axiosApi";
+import axiosInstance from "../classes/axiosApi";
 import Socket from '../classes/socketclass';
 import UserStore from '../classes/userstore';
 import {Button, Dialog, DialogTitle, DialogContent, DialogActions} from 'react-mdl';
