@@ -79,18 +79,20 @@ class MsgProcessor:
                 elif self.context == 3:
                     s = "제어판\네트워크 및 인터넷\네트워크 연결 -> 네트워크아이콘 우클릭 속성 -> 인터넷 프로토콜 버전4를 클릭하여 게이트웨이와 dns가 올바른지 확인후 인트라넷이 되는지 확인해주세요"
                 else:
-                    s = "사단CERT로 문의주시기 바랍니다"
+                    s = "무엇이 안되는것인지 말씀해주세요"
             elif self.step == 2:
                 if self.context == 13:
                     s = "프린터 속성에서 포트가 TCP/IP포트로 선택되어있는지 확인해보세요"
+                elif self.context == 3:
+                    s = "랜선도 뽑았다가 다시 끼워보고, 재부팅을 5회 반복해보고 인트라넷이 되는지 확인해주세요"
+                else:
+                    s = "사단CERT에서 정보보호병 문재현을 찾아주세요"
             elif self.step == 3:
                 if self.context == 13:
                     s = "프린터 마스터 상병 XXX를 찾아주세요"
-                elif self.context == 3:
-                    s = "랜선도 뽑았다가 다시 끼워보고, 재부팅을 5회 반복해보고 인트라넷이 되는지 확인해주세요"
-            elif self.step == 4:
-                if self.context == 3:
+                else:
                     s = "사단CERT에서 정보보호병 문재현을 찾아주세요"
+
         # intranet
         elif self.index == 3:
             s = "랜선에 불이 들어왔는지 확인하고 인트라넷이 되는지 다시 확인해주세요"

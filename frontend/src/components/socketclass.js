@@ -25,10 +25,10 @@ class Socket {
       newChats.push({ "from": "TinkerBell", "msg": data.msg });
       this.allChats = newChats;
       // check if the context of message is same as prev context
-      if (this.context == data.context) {
+      if (this.context == data.context || data.context == 1 || data.context == 2) {
         this.step = this.step + 1;
       } else {
-        this.step = 0;
+        this.step = 1;
         this.context = data.context;
       }
     }

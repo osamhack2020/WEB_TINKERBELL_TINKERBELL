@@ -59,13 +59,13 @@ class ChatConsumer(AsyncConsumer):
     async def receive(self, text_data=None, bytes_data=None):
         data = json.loads(text_data)
         msg = data["msg"]
-        context = data["context"]
-        step = data["step"]
+        context = int(data["context"])
+        step = int(data["step"])
 
         # keras model 로드
         tinkerbell = keras.models.load_model('./tinkerbell_ai')
         msg_processor = MsgProcessor(-1, context, step)
-        # msg 프로세
+        # msg 프로세스
         msg = msg_processor.prep_message(msg)
         output = tinkerbell.predict(msg)
         index = -1
@@ -75,7 +75,6 @@ class ChatConsumer(AsyncConsumer):
         data = msg_processor.get_messasge()
 
         await self.send(json.dumps(data))
-        # await self.send("yassbabyyyyy")
 
     async def send(self, text_data=None, bytes_data=None, close=False):
         """
