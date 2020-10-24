@@ -87,7 +87,7 @@ const Login = observer(
           return (
             <div>
               { UserStore.isLoggedIn ?
-                (<div><div>{ UserStore.username }님 환영합니다</div><Button colored onClick={() => this.logOut()} raised ripple>로그아웃</Button></div>) :
+                (<div><div class="username_login">{ UserStore.username }님 환영합니다</div><Button colored onClick={() => this.logOut()} raised ripple>로그아웃</Button></div>) :
                   (<Button colored onClick={() => this.openLoginDialog()} raised ripple>로그인</Button>)}
               <Dialog open={this.state.loginDialog}>
                 <DialogTitle>로그인</DialogTitle>

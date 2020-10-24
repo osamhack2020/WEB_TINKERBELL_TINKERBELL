@@ -117,6 +117,10 @@
     color: #4d4f4f;
 }
 
+.username_login {
+  float:left;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
