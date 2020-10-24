@@ -1,6 +1,6 @@
 import React from 'react';
-import Socket from '../classes/socketclass';
-import UserStore from '../classes/userstore';
+import Socket from '../../classes/socketclass';
+import UserStore from '../../classes/userstore';
 
 const SubButton = (props) => {
   function sendMessage() {

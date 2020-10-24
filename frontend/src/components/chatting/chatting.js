@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Socket from '../classes/socketclass';
-import UserStore from '../classes/userstore';
+import Socket from '../../classes/socketclass';
+import UserStore from '../../classes/userstore';
 import Message from './message';
 import SubButton from './submitbutton';
-import '../css/chatting.css';
+import '../../css/chatting.css';
 import { observer } from 'mobx-react-lite';
 
 const Chatting = observer(() => {

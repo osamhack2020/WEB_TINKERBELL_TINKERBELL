@@ -1,5 +1,5 @@
 import React from "react";
-import Socket from '../classes/socketclass';
+import Socket from '../../classes/socketclass';
 import { observer } from 'mobx-react-lite';
 
 const Message = observer((props) => {

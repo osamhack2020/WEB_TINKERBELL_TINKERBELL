@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './card';
-import '../css/about.css';
+import '../../css/about.css';
 
 function About() {
   return (

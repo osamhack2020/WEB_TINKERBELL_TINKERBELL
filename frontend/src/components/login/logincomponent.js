@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import axiosInstance from "../classes/axiosApi";
-import Socket from '../classes/socketclass';
-import UserStore from '../classes/userstore';
+import axiosInstance from "../../classes/axiosApi";
+import Socket from '../../classes/socketclass';
+import UserStore from '../../classes/userstore';
 import SignIn from './signin';
 import {Button, Dialog, DialogTitle, DialogContent, DialogActions} from 'react-mdl';
 import { observer } from 'mobx-react-lite';
