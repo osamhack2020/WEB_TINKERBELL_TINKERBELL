@@ -13,8 +13,8 @@ const Chatting = observer (
 
 
       componentWillMount() {
-        if (localStorage.getItem('access_token')) {
-          Socket.socketConnect(localStorage.getItem('access_token'));
+        if (sessionStorage.getItem('access_token')) {
+          Socket.socketConnect(sessionStorage.getItem('access_token'));
         }
       }
 

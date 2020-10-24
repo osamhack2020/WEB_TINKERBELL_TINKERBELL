@@ -15,9 +15,9 @@ const Login = observer(
 
 
       componentWillMount() {
-          if(localStorage.getItem('username')) {
+          if(sessionStorage.getItem('username')) {
               UserStore.isLoggedIn = true;
-              UserStore.username = localStorage.getItem('username');
+              UserStore.username = sessionStorage.getItem('username');
           }
       }
 
@@ -29,9 +29,9 @@ const Login = observer(
                   password: this.state.password_in
               });
               axiosInstance.defaults.headers['Authorization'] = "JWT " + data.data.access;
-              localStorage.setItem('access_token', data.data.access);
-              localStorage.setItem('refresh_token', data.data.refresh);
-              localStorage.setItem('username', this.state.username_in);
+              sessionStorage.setItem('access_token', data.data.access);
+              sessionStorage.setItem('refresh_token', data.data.refresh);
+              sessionStorage.setItem('username', this.state.username_in);
               UserStore.isLoggedIn = true;
               UserStore.username = this.state.username_in;
               Socket.socketConnect(data.data.access);
@@ -62,7 +62,7 @@ const Login = observer(
       logOut() {
         UserStore.isLoggedIn = false;
         UserStore.username = null;
-        localStorage.clear();
+        sessionStorage.clear();
         Socket.socket.close();
       }
 
