@@ -7,29 +7,17 @@ import '../css/chatting.css';
 import { observer } from 'mobx-react-lite';
 
 const Chatting = observer(() => {
-  const [mounted, setMounted] = useState(false);
   const [textValue, changeTextValue] = useState('메시지를 입력하세요');
-
-  if(!mounted){
-    if (sessionStorage.getItem('access_token')) {
-      Socket.socketConnect(sessionStorage.getItem('access_token'));
-    }
-  }
-
-  useEffect(() =>{
-    setMounted(true);
-
-    return () => {
-      console.log("websocket disconnected");
-      Socket.socket.close();
-    }
-  },[]);
 
   return (
     <div class="chatting">
       <div class="chat-box">
         <div class="box-title">TinkerBell</div>
-        <Message />
+        <div class="msg-section">
+          {Socket.allChats.map((chat, i) => (
+              <Message key={i} chat={chat}/>
+          ))}
+        </div>
         <form>
           <input
             class={UserStore.isLoggedIn ? "user-input" : "user-input x-loggedin"}

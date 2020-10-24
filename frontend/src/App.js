@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import Socket from './classes/socketclass';
+import UserStore from './classes/userstore';
 import Landingpage from './components/landingpage';
 import About from './components/about';
 import Chatting from './components/chatting';
@@ -9,6 +11,25 @@ import Login from './components/login';
 
 
 function App() {
+  const [mounted, setMounted] = useState(false);
+  // app이 마운트 되기 전에 sessionstorage에서 access_token을 가져옴
+  if(!mounted){
+    if (sessionStorage.getItem('access_token')) {
+      Socket.socketConnect(sessionStorage.getItem('access_token'));
+    }
+  }
+
+  useEffect(() =>{
+    // app시작시 mounted를 true로
+    setMounted(true);
+
+    // unmount될시 socket을 닫아준다
+    return () => {
+      console.log("websocket disconnected");
+      Socket.socket.close();
+    }
+  },[]);
+
   return (
     <div>
         <Layout>
