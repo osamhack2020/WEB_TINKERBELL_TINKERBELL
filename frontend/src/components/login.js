@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axiosInstance from "./axiosApi";
-import Socket from './socketclass';
-import UserStore from './userstore';
+import Socket from '../classes/socketclass';
+import UserStore from '../classes/userstore';
 import {Button, Dialog, DialogTitle, DialogContent, DialogActions} from 'react-mdl';
 import { observer } from 'mobx-react';
 

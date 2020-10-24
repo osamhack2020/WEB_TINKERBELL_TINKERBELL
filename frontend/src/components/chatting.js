@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Socket from './socketclass';
-import UserStore from './userstore';
+import Socket from '../classes/socketclass';
+import UserStore from '../classes/userstore';
 import '../css/chatting.css';
 import { observer } from 'mobx-react';
 
