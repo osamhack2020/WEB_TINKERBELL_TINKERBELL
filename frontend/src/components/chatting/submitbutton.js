@@ -22,7 +22,7 @@ const SubButton = (props) => {
     <button
       class="submit-button"
       type="button"
-      onClick = {(e) => sendMessage()}
+      onClick = {() => sendMessage()}
     >
       <svg
         version="1.1"

@@ -113,6 +113,11 @@ color:#4d4f4f;
 padding:10px;
 }
 
+.signup {
+  display: inherit !important;
+}
+
+
 .username_login {
 float:left;
 }

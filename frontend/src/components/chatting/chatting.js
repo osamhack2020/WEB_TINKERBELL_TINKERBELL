@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Socket from '../classes/socketclass';
 import UserStore from '../classes/userstore';
 import Message from './message';
