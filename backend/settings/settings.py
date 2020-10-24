@@ -1,7 +1,3 @@
-"""
-
-"""
-
 from pathlib import Path
 from datetime import timedelta
 
@@ -20,13 +16,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-WSGI_APPLICATION = 'project.wsgi.application'
-ASGI_APPLICATION = 'project.routing.application'
-
-CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-)
+WSGI_APPLICATION = 'settings.wsgi.application'
+ASGI_APPLICATION = 'settings.routing.application'
 
 # Application definition
 
@@ -38,10 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
-    'backend',
+    'chatting',
     'authentication',
-    'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 
@@ -78,11 +69,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'project.urls'
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)
+
+ROOT_URLCONF = 'settings.urls'
 
 TEMPLATES = [
     {
