@@ -73,7 +73,7 @@ class MsgProcessor:
         # negative
         elif self.index == 2:
             # printer, toner
-            if step == 0:
+            if self.step == 0:
                 s = "무엇이 안돼는건지 구체적으로 말씀해주십시오"
             elif self.step == 1:
                 if self.context == 13:

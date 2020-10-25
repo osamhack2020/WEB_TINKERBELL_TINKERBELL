@@ -40,9 +40,10 @@ class ChatConsumer(AsyncConsumer):
 
     async def connect(self):
         await self.accept()
-
         answer_list = ["충성! 수고하십니다.", "안녕하세요", "안녕하십니까!"]
-        await self.send(random.choice(answer_list))
+        await self.send(json.dumps({"context": "0", "msg": random.choice(answer_list)}))
+
+
 
 
     async def accept(self, subprotocol=None):
