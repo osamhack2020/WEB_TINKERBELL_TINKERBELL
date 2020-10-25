@@ -64,7 +64,7 @@ class MsgProcessor:
             s = "질문을 이해하지 못했습니다. 조금 더 구체적으로 알려주세요"
         # greeting
         elif self.index == 0:
-            answer_list = ["충성! 수고하십니다.", "안녕하세요", "안녕하십니까!"]
+            answer_list = ["무엇을 도와드릴까요?", "어떤 문제 있으십니까?", "어떤 문제인지 말만하십시오!"]
             s = random.choice(answer_list)
         # positive
         elif self.index == 1:
@@ -73,7 +73,9 @@ class MsgProcessor:
         # negative
         elif self.index == 2:
             # printer, toner
-            if self.step == 1:
+            if step == 0:
+                s = "무엇이 안돼는건지 구체적으로 말씀해주십시오"
+            elif self.step == 1:
                 if self.context == 13:
                     s = "프린터 및 스캐너 추가-> +클릭 -> 가장 하단에 원하는 프린터가 목록에 없습니다 클릭 -> TCP/IP주소로 추가 -> 프린터 ip를입력하여 추가합니다"
                 elif self.context == 3:
