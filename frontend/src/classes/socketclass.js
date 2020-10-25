@@ -24,6 +24,8 @@ class Socket {
       const data = JSON.parse(e.data);
       newChats.push({ "from": "TinkerBell", "msg": data.msg });
       this.allChats = newChats;
+      //sessionstorage에 allChats를 추가
+      sessionStorage.setItem("chats", JSON.stringify(this.allChats));
       // check if the context of message is same as prev context
       if (this.context == data.context || data.context == 1 || data.context == 2) {
         this.step = this.step + 1;

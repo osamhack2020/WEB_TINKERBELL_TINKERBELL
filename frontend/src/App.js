@@ -17,6 +17,7 @@ function App() {
   if(!mounted){
     if (sessionStorage.getItem('access_token') && sessionStorage.getItem('username')) {
       Socket.socketConnect(sessionStorage.getItem('access_token'));
+      Socket.allChats = JSON.parse(sessionStorage.getItem('chats'));
       UserStore.username = sessionStorage.getItem('username');
       UserStore.isLoggedIn = true;
     }

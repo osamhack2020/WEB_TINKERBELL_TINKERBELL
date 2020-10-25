@@ -15,6 +15,8 @@ const SubButton = (props) => {
     const newChats = [...Socket.allChats];
     newChats.push({"from": "You", "msg": props.textValue});
     Socket.allChats = newChats;
+    //sessionstorage에 allChats를 추가
+    sessionStorage.setItem("chats", JSON.stringify(this.allChats));
   };
 
 
