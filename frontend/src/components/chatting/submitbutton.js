@@ -11,7 +11,6 @@ const SubButton = (props) => {
       context: Socket.context,
       step: Socket.step
     }
-    console.log(data);
     Socket.socket.send(JSON.stringify(data));
     const newChats = [...Socket.allChats];
     newChats.push({"from": "You", "msg": props.textValue});

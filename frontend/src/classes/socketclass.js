@@ -22,7 +22,6 @@ class Socket {
     this.socket.onmessage = e => {
       const newChats = [...this.allChats];
       const data = JSON.parse(e.data);
-      console.log(data);
       newChats.push({ "from": "TinkerBell", "msg": data.msg });
       this.allChats = newChats;
       //sessionstorage에 allChats를 추가
