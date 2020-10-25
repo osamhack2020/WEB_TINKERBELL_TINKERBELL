@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Socket from '../../classes/socketclass';
 import UserStore from '../../classes/userstore';
-import Message from './message';
-import SubButton from './submitbutton';
-import Spinner from './spinner';
+import Message from './Message';
+import SubButton from './SubmitButton';
+import Spinner from './Spinner';
 import '../../css/chatting.css';
 import { observer } from 'mobx-react-lite';
 

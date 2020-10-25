@@ -1,7 +1,7 @@
 import React from 'react';
 import Socket from '../../classes/socketclass';
 import UserStore from '../../classes/userstore';
-import ChatUserIcon from './usericon';
+import ChatUserIcon from './UserIcon';
 import Loader from 'react-loader-spinner'
 
 function Spinner () {

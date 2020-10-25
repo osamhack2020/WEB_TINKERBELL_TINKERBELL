@@ -3,11 +3,11 @@ import './App.css';
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import Socket from './classes/socketclass';
 import UserStore from './classes/userstore';
-import Landingpage from './components/landingpage';
-import About from './components/about/about';
-import Chatting from './components/chatting/chatting';
-import FooterSec from './components/footer';
-import Login from './components/login/logincomponent';
+import Landingpage from './components/LandingPage';
+import About from './components/About/About';
+import Chatting from './components/Chatting/Chatting';
+import FooterSec from './components/Footer';
+import Login from './components/LogIn/LogIn';
 
 
 function App() {

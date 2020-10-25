@@ -1,6 +1,6 @@
 import React from "react";
 import Socket from '../../classes/socketclass';
-import ChatUserIcon from './usericon';
+import ChatUserIcon from './UserIcon';
 import { observer } from 'mobx-react-lite';
 
 function Message(props) {

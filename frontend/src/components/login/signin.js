@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axiosInstance from "../../classes/axiosApi";
 import Socket from '../../classes/socketclass';
 import UserStore from '../../classes/userstore';
-import SignUp from './signup';
+import SignUp from './SignUp';
 import {Dialog, DialogTitle, DialogContent, DialogActions, Button} from 'react-mdl';
 
 function SignIn() {

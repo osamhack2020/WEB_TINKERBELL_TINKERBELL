@@ -1,7 +1,7 @@
 import React from 'react';
 import Socket from '../../classes/socketclass';
 import UserStore from '../../classes/userstore';
-import SubmitIcon from './submiticon';
+import SubmitIcon from './SubmitIcon';
 
 function SubButton(props) {
   function sendMessage() {
