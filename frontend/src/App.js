@@ -11,10 +11,9 @@ import Login from './components/LogIn/LogIn';
 
 
 function App() {
-  const [mounted, setMounted] = useState(false);
-  // app이 마운트 되기 전에 sessionstorage에서
-  //accesstoken과 username을 가져온다
-  if(!mounted){
+
+  useEffect(() =>{
+    // app마운트시 실행
     if (sessionStorage.getItem('access_token') && sessionStorage.getItem('username')) {
       Socket.socketConnect(sessionStorage.getItem('access_token'));
       if (sessionStorage.getItem('chats')) {
@@ -23,11 +22,6 @@ function App() {
       UserStore.username = sessionStorage.getItem('username');
       UserStore.isLoggedIn = true;
     }
-  }
-
-  useEffect(() =>{
-    // app시작시 mounted를 true로
-    setMounted(true);
 
     // unmount될시 socket을 닫아준다
     return () => {
