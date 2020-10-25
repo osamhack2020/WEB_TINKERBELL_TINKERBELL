@@ -8,7 +8,8 @@ class Socket {
       // chatting의 context
       context: -1,
       // chatting의 step
-      step: 0
+      step: 0,
+      loading: false
     })
   }
 
@@ -26,6 +27,8 @@ class Socket {
       this.allChats = newChats;
       //sessionstorage에 allChats를 추가
       sessionStorage.setItem("chats", JSON.stringify(this.allChats));
+      //spinner를 종료시킴
+      this.loading = false; 
       // check if the context of message is same as prev context
       if ((this.context == data.context || data.context == 1 || data.context == 2) && data.context != 0) {
         this.step = this.step + 1;
@@ -41,8 +44,6 @@ class Socket {
       console.log("websocket closed!");
       //this.socketConnect();
     }
-
-
   }
 }
 

@@ -3,6 +3,7 @@ import Socket from '../../classes/socketclass';
 import UserStore from '../../classes/userstore';
 import Message from './message';
 import SubButton from './submitbutton';
+import Spinner from './spinner';
 import '../../css/chatting.css';
 import { observer } from 'mobx-react-lite';
 
@@ -14,9 +15,8 @@ const Chatting = observer(() => {
       <div class="chat-box">
         <div class="box-title">TinkerBell</div>
         <div class="msg-section">
-          {Socket.allChats.map((chat, i) => (
-              <Message key={i} chat={chat}/>
-          ))}
+          {Socket.allChats.map((chat, i) => (<Message key={i} chat={chat}/>))}
+          {Socket.loading ? <Spinner/> : <div></div>}
         </div>
         <form>
           <input
