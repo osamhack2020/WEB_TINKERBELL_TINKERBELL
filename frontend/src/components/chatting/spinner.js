@@ -5,7 +5,6 @@ import ChatUserIcon from './usericon';
 import Loader from 'react-loader-spinner'
 
 function Spinner () {
-
   return (
     <div class="chat-section">
       <div class="icon-TinkerBell">

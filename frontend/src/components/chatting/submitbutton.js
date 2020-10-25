@@ -3,7 +3,7 @@ import Socket from '../../classes/socketclass';
 import UserStore from '../../classes/userstore';
 import SubmitIcon from './submiticon';
 
-const SubButton = (props) => {
+function SubButton(props) {
   function sendMessage() {
     console.log("sent");
     const data = {

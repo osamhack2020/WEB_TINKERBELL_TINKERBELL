@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Card = (props) => {
+function Card(props) {
     return (
       <div class={props.class_}>
         <svg width="73px" height="60px" viewBox="0 0 73 60" version="1.1">
