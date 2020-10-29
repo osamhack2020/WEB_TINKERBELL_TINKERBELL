@@ -1,6 +1,6 @@
 
 
-![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/bg.png?raw=true)
+![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/bg2.png?raw=true)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
