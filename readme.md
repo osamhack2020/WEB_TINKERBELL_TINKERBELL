@@ -1,6 +1,6 @@
 
 
-![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/logo.png?raw=truee)
+![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/bg.png?raw=true)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -37,7 +37,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ### front-end
  -  react.js
  -  react-mdl
- - 기타 사용한 라이브러리
+ -  mobx
+ -  axios
 
 ## 설치 안내 (Installation)
 ```bash
