@@ -6,7 +6,12 @@
 
 
 프로젝트 설명
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+근무 서는 중 갑자기 컴퓨터가 안된다?!
+지금 당장 컴퓨터는 써야 되는데 물어볼 사람은 없고…
+이럴 땐 팅커벨에게 물어보시면 됩니다!!
+팅커벨은 컴퓨터 혹은 통신업무 관련 질문에 답변을 해주는 AI 챗봇입니다
+
 
 
 
