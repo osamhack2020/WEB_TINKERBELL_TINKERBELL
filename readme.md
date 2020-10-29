@@ -1,6 +1,6 @@
 
 
-![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/logo.png?raw=true)
+![Logo](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/logo.png?raw=truee)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -14,7 +14,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 ## 팀소개 및 프로잭트 설명 동영상
 
-[![Watch the video](https://img.youtube.com/vi/LjX3eVQdIyk/0.jpg)](https://www.youtube.com/watch?time_continue=117&v=LjX3eVQdIyk)
+[![Watch the video](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/images/mockup.jpg?raw=true)](https://www.youtube.com/watch?v=U-vWZoQn9eE)
 
 ## 기능 설계
 
@@ -27,7 +27,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 * Python 3.8 / Pip [Download & Install Python](https://www.python.org/downloads/release/python-386/) 
 * NPM [Download & Install Npm](https://nodejs.org/en/download/)
 
-## 기술 스택 (Technique Used) 
+## 기술 스택
 
 ### Server(back-end)
  -  Django
@@ -39,11 +39,13 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
  -  react-mdl
  - 기타 사용한 라이브러리
 
-## 설치 안내 (Installation Process)
+## 설치 안내 (Installation)
 ```bash
 $ git clone https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL.git
 $ cd WEB_TINKERBELL_TINKERBELL
+$ cd backend
 $ pip install -r requirements.txt
+$ cd ..
 $ cd frontend
 $ npm install
 ```
@@ -53,6 +55,9 @@ $ npm install
 WEB_TINKERBELL_TINKERBELL폴더로 이동후 아래 커맨드를 이용하여 서버를 실행시킵니다. 이때 서버는 8000포트를 이용하게 됩니다. 
 ```bash
 $ cd WEB_TINKERBELL_TINKERBELL
+$ cd backend
+$ python manage.py makemigrations
+$ python manage.py migrate
 $ python manage.py runserver
 ```
 
