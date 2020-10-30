@@ -33,11 +33,11 @@
 ![context](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/images/chatting.png?raw=true)
 
 ## 기대효과
-  현재 전산실에 오는 전화 중 간단히 해결할 수 있는 문제가 매우 많습니다   
-  팅커벨은 이런 문제들을 스스로 해결해 줄 것이며 그에 따른 부가적 기대효과도 발생합니다
+현재 전산실에 오는 전화 중 간단히 해결할 수 있는 문제가 매우 많습니다   
+팅커벨은 이런 문제들을 스스로 해결해 줄 것이며 그에 따른 부가적 기대효과도 발생합니다   
 
 - 사용자들의 전산실 의존도가 낮아져 비상시 전화대처자의 대처속도가 높아집니다
-- 사용자들이 스스로 문제를 해결하게 되는 것은 전군의 전산능력 향상으로 이어져 또 다른 국방력 향상으로 이어집니다
+- 사용자들이 직접 문제를 해결하게 되는 것은 전군의 전산능력 향상으로 이어져 또 다른 국방력 향상으로 이어집니다
 
 ## 기능 설계
 ![flowchart](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/flowchart.png?raw=true)
