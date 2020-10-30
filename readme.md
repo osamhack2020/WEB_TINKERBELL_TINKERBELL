@@ -42,16 +42,12 @@
 
 ## 기술 스택
 
-### Server(back-end)
- -  [Django](https://www.djangoproject.com/)
- -  [Keras](https://keras.io/)
- -  [Channels](https://channels.readthedocs.io/en/stable/)
- 
-### front-end
- -  [React.js](https://ko.reactjs.org/)
- -  [axios](https://github.com/axios/axios)
- -  [react-mdl](https://www.npmjs.com/package/react-mdl)
- -  [mobx](https://mobx.js.org/README.html)
+Backend | Frontend 
+------------ | -------------
+[Django](https://www.djangoproject.com/) | [React.js](https://ko.reactjs.org/)
+[Keras](https://keras.io/) | [axios](https://github.com/axios/axios)
+[Channels](https://channels.readthedocs.io/en/stable/) | [react-mdl](https://www.npmjs.com/package/react-mdl)
+[SimpleJWT](https://github.com/SimpleJWT/django-rest-framework-simplejwt)|[mobx](https://mobx.js.org/README.html)
 
 ## 설치 권장사항
 - Pycurl >=	7.43.0.5
