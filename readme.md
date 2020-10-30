@@ -4,29 +4,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-
-프로젝트 설명
-
-근무 서는 중 갑자기 컴퓨터가 안된다?!   
-지금 당장 컴퓨터는 써야 되는데 물어볼 사람은 없고…   
-이럴 땐 팅커벨에게 물어보시면 됩니다!!   
-팅커벨은 컴퓨터 혹은 통신업무 관련 질문에 답변을 해주는 AI 챗봇입니다   
+## 팅커벨
+전산실로 오는 하루 평균 전화량은 120통입니다. 그리고 그 중 대부분이 사용자가 간단히 해결할 수 있는 문제들 임에도 불구하고 전화대기 인원이 1명이라 사용자들이 전화를 기다리는 시간은 계속 길어져만 가게됩니다. 또 이런 전화들이 계속 온다면 진짜 긴박한 상황에 대처가 늦어질 위험성이 있습니다. 이런 문제들을 해결 하기 위해 개발한 군내 통신 장애 상담형 AI 에이전트, 팅커벨을 소개합니다  
 
 
 
-
-
-
-## 팀소개 및 프로잭트 설명 동영상
+## 시연 영상
 
 [![Watch the video](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/images/mockup.jpg?raw=true)](https://www.youtube.com/watch?v=U-vWZoQn9eE)
 
 ## 기능 설계
+![flowchart](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/flowchart.png?raw=true)
 
- -  발사믹, 카카오 오븐 등 본인이 편한 목업 프레임워크를 이용하여 제작 후 링크 
- - 수기로 작성시 찍어서 올려주세요
-
-## 컴퓨터 구성 / 필수 조건 안내 (Prerequisites)
+## 필수 조건 안내 (Prerequisites)
 
 * Git - [Download & Install Git](https://git-scm.com/download/win)
 * Python 3.8 / Pip [Download & Install Python](https://www.python.org/downloads/release/python-386/) 
@@ -35,15 +25,19 @@
 ## 기술 스택
 
 ### Server(back-end)
- -  Django
- -  Channels
- -  Keras
+ -  [Django](https://www.djangoproject.com/)
+ -  [Keras](https://keras.io/)
+ -  [Channels](https://channels.readthedocs.io/en/stable/)
  
 ### front-end
- -  react.js
- -  react-mdl
- -  mobx
- -  axios
+ -  [React.js](https://ko.reactjs.org/)
+ -  [axios](https://github.com/axios/axios)
+ -  [react-mdl](https://www.npmjs.com/package/react-mdl)
+ -  [mobx](https://mobx.js.org/README.html)
+
+## 설치 권장사항
+- Pycurl >=	7.43.0.5
+- Twisted >= 20.3.0
 
 ## 설치 안내 (Installation)
 ```bash
@@ -55,6 +49,8 @@ $ cd ..
 $ cd frontend
 $ npm install
 ```
+
+
 
 ## 프로젝트 사용법 (Getting Started)
 ### 백엔드 Django서버 실행 
