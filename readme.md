@@ -13,6 +13,10 @@
 
 [![Watch the video](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/images/mockup.jpg?raw=true)](https://www.youtube.com/watch?v=U-vWZoQn9eE)
 
+## 팅커벨만의 장점
+### 정확한 대답
+팅커벨은 질문의 의도를 90%의 정확도로 알아듣기 때문에 AI 가 말을 인식 못해서 몇 번이고 다시 질문할 염려가 없습니다
+
 ## 기능 설계
 ![flowchart](https://github.com/osamhack2020/WEB_TINKERBELL_TINKERBELL/blob/main/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/flowchart.png?raw=true)
 
